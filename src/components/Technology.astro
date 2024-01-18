@@ -1,0 +1,38 @@
+---
+const pathbase = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/";
+const technology = {
+    java: pathbase + "java/java-original.svg",
+    Python: pathbase + "python/python-original.svg",
+    Anaconda: pathbase + "anaconda/anaconda-original.svg",
+    TypeScript: pathbase + "typescript/typescript-plain.svg",
+    Angular: pathbase + "angularjs/angularjs-plain.svg",
+    React: pathbase + "react/react-original.svg",
+    Bootstrap: pathbase + "bootstrap/bootstrap-plain.svg",
+    CSS: pathbase + "css3/css3-plain.svg",
+    HTML: pathbase + "html5/html5-plain.svg",
+    JavaScript: pathbase + "javascript/javascript-plain.svg",
+    PostGres: pathbase + "postgresql/postgresql-plain.svg",
+    MongoDB: pathbase + "mongodb/mongodb-original.svg",
+    MySql: pathbase + "mysql/mysql-original.svg",
+    Moodle: pathbase + "moodle/moodle-original.svg",
+    Ansible: pathbase + "ansible/ansible-plain.svg",
+    Vagrant: pathbase + "vagrant/vagrant-original.svg",
+    Apache: pathbase + "apache/apache-original.svg",
+    Azure: pathbase + "azure-original.svg",
+    Bash: pathbase + "bash/bash-plain.svg",
+    DJango: pathbase + "django/django-plain.svg",
+    Docker: pathbase + "docker/docker-original.svg",
+    Drupal: pathbase + "drupal/drupal-original.svg",
+    NodeJS: pathbase + "nodejs/nodejs-original.svg",
+    Gradle: pathbase + "gradle/gradle-plain.svg",
+    Jenkins: pathbase + "jenkins/jenkins-original.svg",
+};
+---
+
+<div class="gallery">
+    {
+        Object.entries(technology).map(([tech, path]) => (
+            <img width="46" height="46" alt={tech} src={path} />
+        ))
+    }
+</div>
