@@ -15,7 +15,7 @@ import PortfolioPreview from "../../components/PortfolioPreview.astro";
 // Page section components
 import ContactCTA from "../../components/ContactCTA.astro";
 import Skills from "../../components/Skills.astro";
-import Technologies from "../../components/Technology.astro";
+import { technology } from "../../components/Technology.ts";
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection("work"))
@@ -70,7 +70,13 @@ const projects = (await getCollection("work"))
 					</p>
 				</header>
 
-				<Technologies />
+				<div class="gallery">
+					{
+						Object.entries(technology).map(([tech, path]) => (
+							<img width="46" height="46" alt={tech} src={path} />
+						))
+					}
+				</div>
 			</section>
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
