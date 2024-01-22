@@ -76,7 +76,7 @@ const iconLinks: {
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== "/" &&
+										(href !== `/{lang}/` &&
 											Astro.url.pathname.startsWith(
 												href,
 											)),
@@ -117,7 +117,7 @@ const iconLinks: {
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== "/" &&
+										(href !== `/${lang}/` &&
 											Astro.url.pathname.startsWith(
 												href,
 											)),
